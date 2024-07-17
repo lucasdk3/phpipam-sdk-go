@@ -5,10 +5,10 @@ package subnets
 import (
 	"fmt"
 
-	"github.com/pavel-z1/phpipam-sdk-go/controllers/addresses"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/client"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/session"
+	"github.com/lucasdk3/phpipam-sdk-go/controllers/addresses"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/client"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/session"
 )
 
 func convertFloatToInt(m map[string]interface{}) map[string]interface{} {
