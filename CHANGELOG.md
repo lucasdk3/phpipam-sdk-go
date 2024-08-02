@@ -6,7 +6,7 @@ O formato foi baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/
 e o projeto está seguindo o versionamento conforme [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [0.2.1] - 17/07/2024
+## [0.2.2] - 17/07/2024
 
 ### Fix
 
