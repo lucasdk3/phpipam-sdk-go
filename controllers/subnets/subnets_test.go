@@ -71,7 +71,7 @@ var testGetSubnetByIDOutputExpected = Subnet{
 	Threshold:      0,
 	Location:       0,
 	EditDate:       "",
-	GatewayID:      "",
+	GatewayID:      0,
 	Gateway:        map[string]interface{}(nil),
 	CustomFields:   map[string]interface{}(nil),
 	Nameservers: map[string]interface{}{
