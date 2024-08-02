@@ -5,10 +5,10 @@ package l2domains
 import (
 	"fmt"
 
-	"github.com/pavel-z1/phpipam-sdk-go/controllers/vlans"
-	//"github.com/pavel-z1/phpipam-sdk-go/phpipam"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/client"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/session"
+	"github.com/lucasdk3/phpipam-sdk-go/controllers/vlans"
+	//"github.com/lucasdk3/phpipam-sdk-go/phpipam"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/client"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/session"
 )
 
 // L2Domain represents a PHPIPAM l2domain.

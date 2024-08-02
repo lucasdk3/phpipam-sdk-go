@@ -10,10 +10,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/pavel-z1/phpipam-sdk-go/controllers/addresses"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/session"
-	"github.com/pavel-z1/phpipam-sdk-go/testacc"
+	"github.com/lucasdk3/phpipam-sdk-go/controllers/addresses"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/session"
+	"github.com/lucasdk3/phpipam-sdk-go/testacc"
 )
 
 var testCreateSubnetInput = Subnet{
@@ -71,7 +71,7 @@ var testGetSubnetByIDOutputExpected = Subnet{
 	Threshold:      0,
 	Location:       0,
 	EditDate:       "",
-	GatewayID:      "",
+	GatewayID:      0,
 	Gateway:        map[string]interface{}(nil),
 	CustomFields:   map[string]interface{}(nil),
 	Nameservers: map[string]interface{}{
