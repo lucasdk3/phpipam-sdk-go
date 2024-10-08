@@ -802,6 +802,19 @@ func testAccSubnetCRUDReadByID(t *testing.T, sess *session.Session, s Subnet) {
 	}
 }
 
+func testAccSubnetReadByVlan(t *testing.T, sess *session.Session, vlanId int) {
+	c := NewController(sess)
+
+	out, err := c.GetSubnetsByVLAN(vlanId)
+	if err != nil {
+		t.Fatalf("Can't find subnet by Vlan: %s", err)
+	}
+
+	if !reflect.DeepEqual(vlanId, out) {
+		t.Fatalf("ReadByVlan: Expected %#v, got %#v", vlanId, out)
+	}
+}
+
 // testAccSubnetCRUDUpdate tests the update part of the subnets controller
 // acceptance test.
 func testAccSubnetCRUDUpdate(t *testing.T, sess *session.Session, s Subnet) {
@@ -979,4 +992,13 @@ func TestAccSubnetCustomFieldUpdateRead(t *testing.T) {
 
 	// clean up
 	testAccSubnetCRUDDelete(t, sess, subnet)
+}
+
+func TestAccSubnetGetFromVlan(t *testing.T) {
+	testacc.VetAccConditions(t)
+	testacc.SkipIfCustomNested(t)
+
+	sess := session.NewSession()
+
+	testAccSubnetReadByVlan(t, sess, 10)
 }
