@@ -5,9 +5,9 @@ package vlans
 import (
 	"fmt"
 
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/client"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/session"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/client"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/session"
 )
 
 // VLAN represents a PHPIPAM VLAN.
@@ -58,6 +58,12 @@ func (c *Controller) CreateVLAN(in VLAN) (message string, err error) {
 	return
 }
 
+// GetVLANs GETs a VLANs in the PHPIPAM database
+func (c *Controller) GetVLANs() (out []VLAN, err error) {
+	err = c.SendRequest("GET", "/vlans/", &struct{}{}, &out)
+	return
+}
+
 // GetVLANByID GETs a VLAN via its ID in the PHPIPAM database.
 func (c *Controller) GetVLANByID(id int) (out VLAN, err error) {
 	err = c.SendRequest("GET", fmt.Sprintf("/vlans/%d/", id), &struct{}{}, &out)
@@ -76,8 +82,8 @@ func (c *Controller) GetVLANsByNumber(id int) (out []VLAN, err error) {
 }
 
 func (c *Controller) GetVLANsByNumberAndDomainID(vlan_id int, domain_id int) (out []VLAN, err error) {
-        err = c.SendRequest("GET", fmt.Sprintf("/vlans/search/%d/?filter_by=domainId&filter_value=%d", vlan_id, domain_id), &struct{}{}, &out)
-        return
+	err = c.SendRequest("GET", fmt.Sprintf("/vlans/search/%d/?filter_by=domainId&filter_value=%d", vlan_id, domain_id), &struct{}{}, &out)
+	return
 }
 
 // GetVLANCustomFieldsSchema GETs the custom fields for the vlans controller via

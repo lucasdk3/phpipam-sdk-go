@@ -12,7 +12,11 @@ e o projeto está seguindo o versionamento conforme [Semantic Versioning](https:
 - Adicionado função GetSubnetsByVlan
 
 
-## [0.2.0] - 17/07/2024
+## [0.2.3] - 17/07/2024
+
+### Fix
+
+- Ajustado Subnet.GatewayId de string para int
 
 ### Fix
 

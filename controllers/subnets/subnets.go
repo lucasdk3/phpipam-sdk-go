@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/pavel-z1/phpipam-sdk-go/controllers/addresses"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/client"
-	"github.com/pavel-z1/phpipam-sdk-go/phpipam/session"
+	"github.com/lucasdk3/phpipam-sdk-go/controllers/addresses"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/client"
+	"github.com/lucasdk3/phpipam-sdk-go/phpipam/session"
 )
 
 func convertFloatToInt(m map[string]interface{}) map[string]interface{} {
@@ -104,7 +104,7 @@ type Subnet struct {
 	Gateway map[string]interface{} `json:"gateway,omitempty"`
 
 	// Gateway IP ID
-	GatewayID string `json:"gatewayId,omitempty"`
+	GatewayID int `json:"gatewayId,omitempty"`
 
 	// A map[string]interface{} of custom fields to set on the resource. Note
 	// that this functionality requires PHPIPAM 1.3 or higher with the "Nest

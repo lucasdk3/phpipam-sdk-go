@@ -1,4 +1,4 @@
-module github.com/pavel-z1/phpipam-sdk-go
+module github.com/lucasdk3/phpipam-sdk-go
 
 require (
 	github.com/apex/log v1.9.0
