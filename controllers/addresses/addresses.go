@@ -22,7 +22,7 @@ type Address struct {
 	IPAddress string `json:"ip,omitempty"`
 
 	// true if this IP address is a gateway address.
-	IsGateway phpipam.BoolIntString `json:"is_gateway,omitempty"`
+	IsGateway phpipam.BoolInt `json:"is_gateway,omitempty"`
 
 	// A detailed description of the IP address entry.
 	Description string `json:"description,omitempty"`
