@@ -59,7 +59,7 @@ type Address struct {
 	LastSeen string `json:"lastSeen,omitempty"`
 
 	// true if you want to exclude this address from ping scans.
-	ExcludePing phpipam.BoolIntString `json:"excludePing,omitempty"`
+	ExcludePing phpipam.BoolInt `json:"excludePing,omitempty"`
 
 	// The date of the last edit to this resource.
 	EditDate string `json:"editDate,omitempty"`
